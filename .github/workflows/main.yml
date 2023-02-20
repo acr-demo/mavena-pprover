@@ -30,7 +30,7 @@ jobs:
     environment: demo
     needs: [Deployment]
     steps:
-    - uses: actions/checkout@v3
+    
     - name: docker task
       uses: Azure/docker-login@v1
       with:
