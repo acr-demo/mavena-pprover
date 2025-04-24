@@ -28,7 +28,7 @@ jobs:
           branch: "example-patches"
           delete-branch: true
           title: '[Example] Update report'
-          token: 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+++
+          token: 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
          
           body: |
             Update report
