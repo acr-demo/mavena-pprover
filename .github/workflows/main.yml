@@ -2,7 +2,7 @@ name: Java CI with Maven || Terraform
 
 on:
   push:
-    branches: [ "feature-main" ]
+    branches: [ "main" ]
   
 
 jobs:
@@ -19,17 +19,4 @@ jobs:
     - name: update author
       run: echo ${{ env.GIT_COMMIT_AUTHOR_NAME }} > AUTHOR
       
-    - name: Raise PR
-      uses: peter-evans/create-pull-request@v3
-      with:
-          base: main
-          committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
-          author:  ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
-          signoff: false
-          branch: "feature-main"
-          delete-branch: false
-          title: '[Example] Update report'
-          token: ${{ secrets.PAT }}
-         
-          body: |
-            Update report..
+   
