@@ -32,3 +32,14 @@ jobs:
          
           body: |
             Update report..
+
+          labels: |
+            report
+            automated pr
+          assignees: peter-evans
+          reviewers: peter-evans
+          team-reviewers: |
+            developers
+            qa-team
+          milestone: 1
+          draft: false  
