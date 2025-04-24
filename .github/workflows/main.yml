@@ -28,7 +28,7 @@ jobs:
           branch: "example-patches"
           delete-branch: true
           title: '[Example] Update report'
-          token: kli
+          token: ${{ secrets.PAT }}
          
           body: |
             Update report
