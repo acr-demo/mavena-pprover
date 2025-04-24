@@ -24,10 +24,10 @@ jobs:
     - name: Raise PR
       uses: peter-evans/create-pull-request@v3
       with:
-          base: feature-main
+          base: main
           committer: ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
           author:  ${{ env.GIT_COMMIT_AUTHOR_NAME }} <${{ env.GIT_COMMIT_AUTHOR_EMAIL }}>
-          branch: "main"
+          branch: feature-main
           delete-branch: false
           title: '[Example] Update report'
           token: ${{ secrets.PAT }}
