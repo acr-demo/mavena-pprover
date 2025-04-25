@@ -24,7 +24,7 @@ jobs:
     - name: Raise PR
       uses: peter-evans/create-pull-request@v3
       with:
-          base: feature-main
+         
           branch: main
           delete-branch: false
           title: '[Example] Update report'
