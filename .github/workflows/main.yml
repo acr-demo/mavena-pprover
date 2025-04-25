@@ -28,7 +28,7 @@ jobs:
           branch: main
           delete-branch: false
           title: '[Example] Update report'
-        
+          token: ${{ secrets.PAT }}
          
           body: Update report..
             
