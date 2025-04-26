@@ -18,7 +18,7 @@ jobs:
       id: tag
       with:
         github-token: ${{ secrets.PAT}}
-        with-v: "true" 
+        with-v1: "true" 
         
     - name: new-outout
       run: echo ${{ steps.tag.outputs.tag }}
