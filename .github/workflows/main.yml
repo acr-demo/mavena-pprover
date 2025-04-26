@@ -21,4 +21,5 @@ jobs:
         with-v: "true" 
         
     - name: new-outout
-      run: ${{ steps.tag.outputs.version }}"
+      run: ${{ steps.tag.outputs.version }}
+    - run: echo ${{ steps.tag.outputs.version }}
