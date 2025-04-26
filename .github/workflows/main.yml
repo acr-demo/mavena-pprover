@@ -25,9 +25,9 @@ jobs:
        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
        prerelease: false
-       tag_name: 'Releasev123'
+       tag_name: '${{ github.ref }}'
 
-       release_name: ' Releasev123 '
+       release_name: ' Releasev1234 '
        body: 'Description of the changes in this release'  
        
    
