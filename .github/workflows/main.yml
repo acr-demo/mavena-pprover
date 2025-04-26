@@ -17,7 +17,8 @@ jobs:
       if: github.ref == 'refs/heads/main'
       with:
         github-token: ${{ secrets.PAT}}
-        with-h: "true"
+    #    with-h: "true"
+        tag: harshit
 
 # after deleting the tag v0.0.1
     
