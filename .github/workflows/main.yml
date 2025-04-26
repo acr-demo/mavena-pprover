@@ -12,8 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-
+      
     - uses: phish108/autotag-action@v1.1.55
+      if: github.ref == 'refs/heads/main-feature'
       with:
         github-token: ${{ secrets.PAT}}
         with-v: "true"
