@@ -25,9 +25,9 @@ jobs:
        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
        prerelease: false
-       tag_name: 'Release v123'
+       tag_name: 'Releasev123'
 
-       release_name: ' Release v123 '
+       release_name: ' Releasev123 '
        body: 'Description of the changes in this release'  
        
    
