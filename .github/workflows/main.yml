@@ -15,6 +15,7 @@ jobs:
       
     - uses: phish108/autotag-action@v1.1.55
       if: github.ref == 'refs/heads/main'
+      id: tag
       with:
         github-token: ${{ secrets.PAT}}
         with-v: "true" 
@@ -23,9 +24,14 @@ jobs:
       env:
        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
-       tag_name: 'v${{ github.run_number }}'
-       release_name: 'Release v${{ github.run_number }}'
+       tag_name: 'v'
+       release_name: 'Release v${{ steps.tag.outputs.stdout }}  '
        body: 'Description of the changes in this release'  
+       
+    - name: Build the Docker image
+      run: ${{ steps.tag.outputs.stdout }}  
+
+       
 
 
 # after deleting the tag v0.0.1
