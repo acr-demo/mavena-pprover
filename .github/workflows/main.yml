@@ -1,4 +1,4 @@
-name: Java CI with Maven || Terraform.
+name: Java CI with Maven || Terraform..
 
 on:
   push:
@@ -15,10 +15,10 @@ jobs:
       
     - uses: phish108/autotag-action@v1.1.55
       if: github.ref == 'refs/heads/main'
-      id: tag
+      id: tags
       with:
         github-token: ${{ secrets.PAT}}
         with-v: "false" 
         
     - name: new-outout
-      run: echo ${{ steps.tag.outputs.tag }}
+      run: echo ${{ steps.tags.outputs.name }}
