@@ -24,6 +24,7 @@ jobs:
       env:
        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
+       prerelease: false
        tag_name: 'v*'
        release_name: 'Release v*  '
        body: 'Description of the changes in this release'  
