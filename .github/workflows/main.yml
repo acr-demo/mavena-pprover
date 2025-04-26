@@ -20,10 +20,12 @@ jobs:
         github-token: ${{ secrets.PAT}}
         with-v: "true" 
         
-    
-   
-       
+    - uses: actions/create-release@v1
+      env:
+       GITHUB_TOKEN: ${{ secrets.PAT }}
+      with:
+       prerelease: false
+       tag_name: 'v1.*'
 
-
-# after deleting the tag v0.0.1
-    
+       release_name: 'v2.*'
+       body: 'Description of the changes in this release'  
