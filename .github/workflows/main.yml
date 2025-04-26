@@ -21,5 +21,4 @@ jobs:
         with-v: "true" 
         
     - name: new-outout
-      run: ${{ steps.tag.outputs.tag }}
-    - run: echo ${{ steps.tag.outputs.tag }}
+      run: echo ${{ steps.tag.outputs.tag }}
