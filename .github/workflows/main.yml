@@ -24,13 +24,11 @@ jobs:
       env:
        GITHUB_TOKEN: ${{ secrets.PAT }}
       with:
-       
-       release_name: 'Release v${{ steps.tag.outputs.stdout }}  '
+       tag_name: 'v*'
+       release_name: 'Release v*  '
        body: 'Description of the changes in this release'  
        
-    - name: Build the Docker image
-      run: echo ${{ steps.tag.outputs.stdout }}  
-
+   
        
 
 
