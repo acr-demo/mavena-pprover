@@ -1,4 +1,4 @@
-name: Java CI with Maven || Terraform 
+name: Java CI with Maven || Terraform.
 
 on:
   push:
